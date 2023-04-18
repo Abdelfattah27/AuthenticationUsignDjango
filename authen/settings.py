@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "rest_framework" , 
     "users" , 
     "knox" ,
-   'drf_yasg',
+    'drf_yasg',
+    "notes"
 ]
 REST_FRAMEWORK  = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),

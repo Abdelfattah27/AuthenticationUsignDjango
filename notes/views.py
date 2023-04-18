@@ -22,17 +22,17 @@ def get_user_notes(request) :
           "notes" : list(user_notes)
         })
     return Response({"error" :"not authenticated"  }, status=400)
-@swagger_auto_schema(
-    method = "post" ,
-	operation_summary="synchronize notes", # summarizes the dropdown in GET
-	operation_description="""
-	**send post request with the notes updated **
-	- you must include the Token on the header of the request """, 
-	responses={200:'get the user notes successfully',
-	401: '(invalid token)' ,
-    400 : "not authenticated, no token provided"})
-@api_view(["POST"])
-def synchronize_notes(request) : 
-    # TODO Update note by id 
-    # TODO create new note
-    # TODO delete note by id  
+# @swagger_auto_schema(
+#     method = "post" ,
+# 	operation_summary="synchronize notes", # summarizes the dropdown in GET
+# 	operation_description="""
+# 	**send post request with the notes updated **
+# 	- you must include the Token on the header of the request """, 
+# 	responses={200:'get the user notes successfully',
+# 	401: '(invalid token)' ,
+#     400 : "not authenticated, no token provided"})
+# # @api_view(["POST"])
+# # def synchronize_notes(request) : 
+# #     # TODO Update note by id 
+# #     # TODO create new note
+# #     # TODO delete note by id
